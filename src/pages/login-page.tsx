@@ -5,7 +5,8 @@ const LoginPage: React.FC = () => {
 
 
     const handleLogin = () => {
-    window.location.href ='https://main-sso-front.netlify.app?clientId=client-app-1'
+        const currentUrl = window.location.href;
+        window.location.href =`https://main-sso-front.netlify.app?clientUrl=${encodeURIComponent(currentUrl)}` ;
     };
 
     return (
